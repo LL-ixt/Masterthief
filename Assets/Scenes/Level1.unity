@@ -18045,6 +18045,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d861eaa09df204a8392c0e85a930d0, type: 3}
+--- !u!82 &423225302 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8154571632982842372, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 6535577914231091597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -18671,6 +18676,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d861eaa09df204a8392c0e85a930d0, type: 3}
+--- !u!82 &919728161 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1621323294693412777, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 6535577914231091597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &921310178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1339021597407937433, guid: d951556139c200d4e885d5c710d9ea05, type: 3}
@@ -25281,6 +25291,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: findAudio
+      value: 
+      objectReference: {fileID: 919728161}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: combatAudio
+      value: 
+      objectReference: {fileID: 423225302}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -58196,6 +58196,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: findAudio
+      value: 
+      objectReference: {fileID: 1520285696}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: combatAudio
+      value: 
+      objectReference: {fileID: 1520285695}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -58242,6 +58250,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9157269ace124b54fb32308a7060b7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!82 &1520285695 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8154571632982842372, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 1520285690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1520285696 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1621323294693412777, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 1520285690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1523100106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3370768368866361352, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
@@ -59680,7 +59698,7 @@ Transform:
   m_GameObject: {fileID: 1959698428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00007009506, y: -5.9, z: -10}
+  m_LocalPosition: {x: -0.00007009506, y: -11.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

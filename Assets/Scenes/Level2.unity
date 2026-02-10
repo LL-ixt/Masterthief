@@ -17989,6 +17989,11 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!82 &11347642 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1621323294693412777, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 1339786673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &28225529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19816,6 +19821,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &696239319 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8154571632982842372, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+  m_PrefabInstance: {fileID: 1339786673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &715147425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4001099806701172297, guid: 02d861eaa09df204a8392c0e85a930d0, type: 3}
@@ -26248,6 +26258,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: findAudio
+      value: 
+      objectReference: {fileID: 11347642}
+    - target: {fileID: 7686976134338155487, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
+      propertyPath: combatAudio
+      value: 
+      objectReference: {fileID: 696239319}
     - target: {fileID: 7818172863476130210, guid: 4dbe4d737e07cd44dac9641981523b07, type: 3}
       propertyPath: OutputChannel
       value: 2

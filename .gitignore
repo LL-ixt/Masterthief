@@ -12,6 +12,7 @@
 /[Uu]ser[Ss]ettings/
 Assets/Art/
 Assets/Characters/
+Audio
 *.log
 
 # MemoryCaptures can get excessive in size.

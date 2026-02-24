@@ -19,6 +19,20 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
+    public static PlayerController Instance;
+    public bool readyToCollect = false;
+    public bool readyToRefillHP = false;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Lấy component Animator
@@ -27,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         if (isDead) return;
         if (movementInput != Vector2.zero) {
+            Debug.Log("movement input: " + movementInput);
             // 1. Thử di chuyển theo hướng input gốc
             bool success = TryMove(movementInput);
 
@@ -71,12 +86,9 @@ public class PlayerController : MonoBehaviour
     // HÀM CẬP NHẬT CÁC THAM SỐ CHO BLEND TREE
     private void UpdateAnimatorParameters(Vector2 input)
     {
-        // 1. Cập nhật tham số IsMoving
+        // Cập nhật tham số IsMoving
         animator.SetBool("IsMoving", true);
 
-        // 2. Cập nhật hướng X và Y cho Blend Tree
-        // Lấy hướng di chuyển cuối cùng (nếu input có cả X và Y, chúng ta lấy giá trị đó)
-        
         // Điều chỉnh hướng vector để giữ hướng cuối cùng mà nhân vật quay mặt tới
         if (input.x != 0 || input.y != 0)
         {
@@ -106,9 +118,7 @@ public class PlayerController : MonoBehaviour
 
     private System.Collections.IEnumerator WaitAndFinishGame()
     {
-        // Đợi một khoảng thời gian bằng với độ dài của clip "player_die"
-        // Hoặc kiểm tra trạng thái animator như cách làm với Guard
-        yield return new WaitForSecondsRealtime(1.5f); // Giả sử clip dài 1.5s
+        yield return new WaitForSecondsRealtime(1.5f);
         if (ScoreManager.Instance != null)
         {
             int currentIdx = ScoreManager.Instance.currentLevelIdx; // Lấy index level hiện tại
@@ -118,12 +128,25 @@ public class PlayerController : MonoBehaviour
         }
         // Chuyển sang cảnh thất bại
         UnityEngine.SceneManagement.SceneManager.LoadScene("ResultLose");
-        
-        // Nếu muốn xóa object thì dùng Destroy, nhưng thường sẽ chuyển Scene luôn
-        // Destroy(gameObject); 
     }
-    // Input System Callback
+
     void OnMove(InputValue value) {
         movementInput = value.Get<Vector2>();
+    }
+
+    void OnCollect(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            readyToCollect = true;
+        }
+    }
+
+    void OnRefill(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            readyToRefillHP = true;
+        }
     }
 }

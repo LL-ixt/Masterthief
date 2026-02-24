@@ -19,10 +19,11 @@ public class PlayerCombat : MonoBehaviour
             ScoreManager.Instance.UpdateScore(cost);
             HandleShooting();  
         }
-        else if (Keyboard.current.xKey.wasPressedThisFrame && ScoreManager.Instance.CheckScore(5f))
+        else if (PlayerController.Instance.readyToRefillHP && ScoreManager.Instance.CheckScore(5f))
         {
             playerDamageController.ReceiveDamage(-5f);
             ScoreManager.Instance.UpdateScore(-5f);
+            PlayerController.Instance.readyToRefillHP = false;
         }
     }
 

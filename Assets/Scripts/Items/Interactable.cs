@@ -14,9 +14,10 @@ public abstract class Interactable : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (playerInRange && Keyboard.current.tKey.wasPressedThisFrame)
+        if (playerInRange && PlayerController.Instance.readyToCollect)
         {
             OnInteract();
+            PlayerController.Instance.readyToCollect = false;
         }
     }
 
